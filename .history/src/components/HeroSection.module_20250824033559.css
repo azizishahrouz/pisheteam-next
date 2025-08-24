@@ -1,0 +1,551 @@
+/* Clean, Responsive CSS - Projects Section Only */
+.projectsSection {
+  margin: 80px auto;
+  max-width: 1400px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.projectsHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.projectsTitle {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.projectsSubtitle {
+  color: #ffc94b;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.projectsContainer {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.projectsGrid {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.projectsGrid::-webkit-scrollbar {
+  display: none;
+}
+
+.projectCard {
+  flex: 0 0 380px;
+  min-height: 420px;
+  background: linear-gradient(145deg, #1a1c3b 0%, #23243a 100%);
+  border-radius: 20px;
+  border: 1px solid #2a2d4a;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  scroll-snap-align: start;
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  border-color: #4fc3f7;
+}
+
+.projectCardTop {
+  background: linear-gradient(135deg, #2a2d4a 0%, #1a1c3b 100%);
+  padding: 24px 28px 20px 28px;
+  border-bottom: 1px solid #3a3d5a;
+  position: relative;
+}
+
+.projectCardTop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4fc3f7, #72c421);
+  border-radius: 20px 20px 0 0;
+}
+
+.projectTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+}
+
+.projectClient {
+  font-size: 0.95rem;
+  color: #b0b3c8;
+  font-weight: 500;
+}
+
+.projectCardBottom {
+  padding: 28px;
+  background: #1a1c3b;
+}
+
+.projectMetaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.projectBadge {
+  background: linear-gradient(135deg, #72c421 0%, #5a9e1a 100%);
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  border: 1px solid #8ed42a;
+  box-shadow: 0 2px 8px rgba(114, 196, 33, 0.3);
+}
+
+.projectDuration {
+  color: #b0b3c8;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.projectBottomTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.projectDescription {
+  color: #b0b3c8;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.readMoreBtn {
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 16px rgba(79, 195, 247, 0.3);
+  border: 1px solid #6dd4ff;
+  width: 100%;
+  justify-content: center;
+}
+
+.readMoreBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 195, 247, 0.4);
+  background: linear-gradient(135deg, #6dd4ff 0%, #4fc3f7 100%);
+}
+
+.readMoreBtn svg {
+  transition: transform 0.3s ease;
+}
+
+.readMoreBtn:hover svg {
+  transform: translateX(4px);
+}
+
+/* Professional Scroll Buttons */
+.scrollButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #1a1c3b 0%, #23243a 100%);
+  border: 2px solid #4fc3f7;
+  color: #4fc3f7;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.scrollButton:hover {
+  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
+  color: #fff;
+  border-color: #6dd4ff;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 32px rgba(79, 195, 247, 0.4);
+}
+
+.scrollButton:first-child {
+  left: -28px;
+}
+
+.scrollButton:last-child {
+  right: -28px;
+}
+
+/* Progress Indicator */
+.progressIndicator {
+  margin-top: 40px;
+  width: 100%;
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: #2a2d4a;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #4fc3f7, #72c421);
+  border-radius: 2px;
+  width: 33.33%;
+  transition: width 0.3s ease;
+}
+
+/* RESPONSIVE DESIGN - CLEAN AND WORKING */
+@media (max-width: 1400px) {
+  .projectsSection {
+    max-width: 1200px;
+    padding: 0 16px;
+  }
+  
+  .projectsContainer {
+    padding: 0 40px;
+  }
+  
+  .projectCard {
+    flex: 0 0 350px;
+  }
+  
+  .scrollButton:first-child {
+    left: -20px;
+  }
+  
+  .scrollButton:last-child {
+    right: -20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .projectsSection {
+    max-width: 1000px;
+    padding: 0 12px;
+  }
+  
+  .projectsContainer {
+    padding: 0 30px;
+  }
+  
+  .projectCard {
+    flex: 0 0 320px;
+    min-height: 400px;
+  }
+  
+  .scrollButton {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .scrollButton:first-child {
+    left: -24px;
+  }
+  
+  .scrollButton:last-child {
+    right: -24px;
+  }
+}
+
+@media (max-width: 900px) {
+  .projectsSection {
+    margin: 60px auto;
+    padding: 0 8px;
+  }
+  
+  .projectsHeader {
+    margin-bottom: 32px;
+  }
+  
+  .projectsTitle {
+    font-size: 2rem;
+  }
+  
+  .projectsContainer {
+    padding: 0 20px;
+  }
+  
+  .projectsGrid {
+    gap: 24px;
+  }
+  
+  .projectCard {
+    flex: 0 0 300px;
+    min-height: 380px;
+  }
+  
+  .projectCardTop {
+    padding: 20px 24px 16px 24px;
+  }
+  
+  .projectCardBottom {
+    padding: 24px;
+  }
+  
+  .scrollButton {
+    width: 44px;
+    height: 44px;
+  }
+  
+  .scrollButton:first-child {
+    left: -22px;
+  }
+  
+  .scrollButton:last-child {
+    right: -22px;
+  }
+  
+  .progressIndicator {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .projectsSection {
+    margin: 40px auto;
+    padding: 0 4px;
+  }
+  
+  .projectsTitle {
+    font-size: 1.8rem;
+  }
+  
+  .projectsSubtitle {
+    font-size: 1rem;
+  }
+  
+  .projectsContainer {
+    padding: 0 16px;
+  }
+  
+  .projectsGrid {
+    gap: 20px;
+  }
+  
+  .projectCard {
+    flex: 0 0 280px;
+    min-height: 360px;
+  }
+  
+  .projectCardTop {
+    padding: 18px 20px 14px 20px;
+  }
+  
+  .projectCardBottom {
+    padding: 20px;
+  }
+  
+  .projectTitle {
+    font-size: 1.1rem;
+  }
+  
+  .projectBottomTitle {
+    font-size: 1rem;
+  }
+  
+  .scrollButton {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .scrollButton:first-child {
+    left: -20px;
+  }
+  
+  .scrollButton:last-child {
+    right: -20px;
+  }
+  
+  .progressIndicator {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .projectsSection {
+    margin: 32px auto;
+    padding: 0 2px;
+  }
+  
+  .projectsHeader {
+    margin-bottom: 24px;
+  }
+  
+  .projectsTitle {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+  }
+  
+  .projectsSubtitle {
+    font-size: 0.95rem;
+  }
+  
+  .projectsContainer {
+    padding: 0 12px;
+  }
+  
+  .projectsGrid {
+    gap: 16px;
+  }
+  
+  .projectCard {
+    flex: 0 0 260px;
+    min-height: 340px;
+  }
+  
+  .projectCardTop {
+    padding: 16px 18px 12px 18px;
+  }
+  
+  .projectCardBottom {
+    padding: 18px;
+  }
+  
+  .projectTitle {
+    font-size: 1rem;
+  }
+  
+  .projectBottomTitle {
+    font-size: 0.95rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.9rem;
+  }
+  
+  .readMoreBtn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .scrollButton {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .scrollButton:first-child {
+    left: -18px;
+  }
+  
+  .scrollButton:last-child {
+    right: -18px;
+  }
+  
+  .progressIndicator {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectsSection {
+    margin: 24px auto;
+    padding: 0 1px;
+  }
+  
+  .projectsTitle {
+    font-size: 1.4rem;
+  }
+  
+  .projectsSubtitle {
+    font-size: 0.9rem;
+  }
+  
+  .projectsContainer {
+    padding: 0 8px;
+  }
+  
+  .projectsGrid {
+    gap: 12px;
+  }
+  
+  .projectCard {
+    flex: 0 0 240px;
+    min-height: 320px;
+  }
+  
+  .projectCardTop {
+    padding: 14px 16px 10px 16px;
+  }
+  
+  .projectCardBottom {
+    padding: 16px;
+  }
+  
+  .projectTitle {
+    font-size: 0.95rem;
+  }
+  
+  .projectBottomTitle {
+    font-size: 0.9rem;
+  }
+  
+  .projectDescription {
+    font-size: 0.85rem;
+  }
+  
+  .readMoreBtn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  
+  .scrollButton {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .scrollButton:first-child {
+    left: -16px;
+  }
+  
+  .scrollButton:last-child {
+    right: -16px;
+  }
+  
+  .progressIndicator {
+    margin-top: 20px;
+  }
+}
+

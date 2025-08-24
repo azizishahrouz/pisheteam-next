@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserTie, faCheckSquare, faClock } from "@fortawesome/free-solid-svg-icons";
-import styles from "./StatsSection.module.css";
+import styles from "./HeroSection.module.css";
 
 const StatsSection = () => (
   <section className={styles.statsSection}>
