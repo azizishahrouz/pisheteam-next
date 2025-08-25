@@ -55,7 +55,7 @@ const HeroSection = () => {
           )}
           <li onClick={() => scrollToSection('services')}>Services</li>
           <li onClick={() => scrollToSection('projects-section')}>Projects</li>
-          <li onClick={() => scrollToSection('pricing')}>Plans</li>
+          <li onClick={() => scrollToSection('reviews')}>Reviews</li>
           <li onClick={() => scrollToSection('about')}>About Us</li>
           <li onClick={() => scrollToSection('blog')}>Blog</li>
           <li>

@@ -21,13 +21,6 @@ const HeroSection = () => {
     }
   };
 
-  const scrollToPricing = () => {
-    const pricingSection = document.getElementById('pricing');
-    if (pricingSection) {
-      pricingSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <header className={styles.heroSection}>
       <nav className={styles.navbar}>
@@ -55,11 +48,11 @@ const HeroSection = () => {
           )}
           <li onClick={() => scrollToSection('services')}>Services</li>
           <li onClick={() => scrollToSection('projects-section')}>Projects</li>
-          <li onClick={() => scrollToSection('pricing')}>Plans</li>
+          <li onClick={() => scrollToSection('reviews')}>Reviews</li>
           <li onClick={() => scrollToSection('about')}>About Us</li>
           <li onClick={() => scrollToSection('blog')}>Blog</li>
           <li>
-            <button className={styles.contactBtn} onClick={() => scrollToSection('contact')}>Contact</button>
+            <button className={styles.contactBtn}>Contact</button>
           </li>
         </ul>
         {menuOpen && <div className={styles.menuOverlay} onClick={() => setMenuOpen(false)}></div>}
@@ -76,7 +69,7 @@ const HeroSection = () => {
           <p>
             US-based tech agency crafting custom web applications, AI solutions, and automation tools for startups and SMBs
           </p>
-          <button className={styles.getInTouch} onClick={scrollToPricing}>Get in Touch</button>
+          <button className={styles.getInTouch}>Get in Touch</button>
         </div>
         <div className={styles.heroImage}>
           <Image

@@ -29,13 +29,13 @@ const HeroSection = () => {
   };
 
   return (
-    <header className={styles.heroSection}>
-      <nav className={styles.navbar}>
-        <div className={`${styles.logo} ${styles.logoContainer}`}>
+    <header className={styles.header}>
+      <div className={styles.headerContainer}>
+        <div className={styles.logo}>
           <Image src={logo} alt="Pisheteam Logo" className={styles.logoImg} width={160} height={110} />
         </div>
         <button
-          className={styles.hamburger}
+          className={styles.mobileMenuBtn}
           aria-label="Open menu"
           onClick={() => setMenuOpen((prev) => !prev)}
         >
@@ -44,15 +44,6 @@ const HeroSection = () => {
           <span className={styles.hamburgerBar}></span>
         </button>
         <ul className={`${styles.navLinks} ${menuOpen ? styles.menuOpen : ''}`}>
-          {menuOpen && (
-            <button
-              className={styles.closeMenuBtn}
-              aria-label="Close menu"
-              onClick={() => setMenuOpen(false)}
-            >
-              &times;
-            </button>
-          )}
           <li onClick={() => scrollToSection('services')}>Services</li>
           <li onClick={() => scrollToSection('projects-section')}>Projects</li>
           <li onClick={() => scrollToSection('pricing')}>Plans</li>
@@ -62,8 +53,7 @@ const HeroSection = () => {
             <button className={styles.contactBtn} onClick={() => scrollToSection('contact')}>Contact</button>
           </li>
         </ul>
-        {menuOpen && <div className={styles.menuOverlay} onClick={() => setMenuOpen(false)}></div>}
-      </nav>
+      </div>
       <div className={styles.heroContent}>
         <div className={styles.heroText}>
           <h1>

@@ -6,7 +6,6 @@ import ClientsSection from "../src/components/ClientsSection";
 import ProjectsSection from "../src/components/ProjectsSection";
 import DiscoveryCallSection from "../src/components/DiscoveryCallSection";
 import PricingSection from "../src/components/PricingSection";
-import AfterSalesServiceSection from "../src/components/AfterSalesServiceSection";
 import UserProfileCard from "../src/components/UserProfileCard";
 import Footer from "../src/components/Footer";
 import styles from "../src/components/HeroSection.module.css";
@@ -115,7 +114,6 @@ const HomePage = () => {
       <ServicesSection />
       <ProjectsSection />
       <PricingSection />
-      <AfterSalesServiceSection />
       <DiscoveryCallSection />
       <div className={cardStyles.profileCardsRow} id="contact">
         <UserProfileCard profileImg="/photo_shah.jpg" name="Shahrouz Azizi" jobTitle="Front-End & AI Automation Developer" bio="Building modern web apps with Next.js and smart AI-powered automation. Focused on clean design, speed, and scalable development." socials={socials1} minHeight={420} maxHeight={420} />

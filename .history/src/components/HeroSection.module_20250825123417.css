@@ -1276,7 +1276,7 @@
   }
 }
 
-/* --- Professional Metallic Pricing Section --- */
+/* --- Modern Metallic Pricing Section --- */
 .pricingSection {
   margin: 80px auto;
   max-width: 1200px;
@@ -1288,19 +1288,6 @@
 
 .pricingHeader {
   margin-bottom: 48px;
-  position: relative;
-}
-
-.pricingHeader::after {
-  content: '';
-  position: absolute;
-  bottom: -16px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 3px;
-  background: linear-gradient(90deg, #4fc3f7, #72c421, #ffc94b);
-  border-radius: 2px;
 }
 
 .pricingTitle {
@@ -1309,14 +1296,12 @@
   color: #fff;
   margin-bottom: 18px;
   letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .pricingSubtitle {
   color: #ffc94b;
   font-size: 1.1rem;
   font-weight: 500;
-  text-shadow: 0 1px 4px rgba(255, 201, 75, 0.3);
 }
 
 .pricingContainer {
@@ -1328,18 +1313,17 @@
 }
 
 .pricingCard {
-  background: linear-gradient(145deg, #0f1123 0%, #1a1c3b 50%, #23243a 100%);
-  border-radius: 18px;
+  background: linear-gradient(145deg, #0f1123 0%, #1a1c3b 100%);
+  border-radius: 16px;
   border: 2px solid var(--card-color);
-  padding: 22px 20px;
+  padding: 24px 20px;
   position: relative;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 
     0 0 20px rgba(var(--glow-color), 0.3),
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 8px 32px rgba(0, 0, 0, 0.4);
   overflow: hidden;
-  min-height: 380px;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
 }
@@ -1352,64 +1336,40 @@
   right: -2px;
   bottom: -2px;
   background: linear-gradient(45deg, var(--glow-color), transparent, var(--glow-color));
-  border-radius: 20px;
+  border-radius: 16px;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.pricingCard::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: opacity 0.3s ease;
 }
 
 .pricingCard:hover::before {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .pricingCard:hover {
-  transform: translateY(-12px) scale(1.02);
+  transform: translateY(-8px);
   box-shadow: 
-    0 0 40px rgba(var(--glow-color), 0.6),
-    0 20px 60px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    0 0 30px rgba(var(--glow-color), 0.5),
+    0 16px 48px rgba(0, 0, 0, 0.5);
 }
 
 .featuredCard {
   transform: scale(1.05);
   border-width: 3px;
   box-shadow: 
-    0 0 30px rgba(var(--glow-color), 0.5),
-    0 15px 50px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    0 0 25px rgba(var(--glow-color), 0.4),
+    0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 .featuredCard:hover {
-  transform: scale(1.05) translateY(-12px) scale(1.02);
+  transform: scale(1.05) translateY(-8px);
 }
 
 .cardHeader {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-}
-
-.cardHeader::after {
-  content: '';
-  position: absolute;
-  bottom: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--card-color), transparent);
 }
 
 .packageIcon {
@@ -1417,34 +1377,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 32px;
+  height: 48px;
 }
 
 .packageIcon svg {
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+  transition: transform 0.3s ease;
 }
 
 .pricingCard:hover .packageIcon svg {
-  transform: scale(1.1) rotate(3deg);
-  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.6));
+  transform: scale(1.1);
 }
 
 .packageName {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: var(--card-color);
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(var(--glow-color), 0.5);
 }
 
 .priceSection {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
 }
 
 .price {
@@ -1452,7 +1410,6 @@
   font-weight: 800;
   color: var(--card-color);
   line-height: 1;
-  text-shadow: 0 2px 8px rgba(var(--glow-color), 0.4);
 }
 
 .period {
@@ -1482,14 +1439,6 @@
   font-size: 0.9rem;
   font-weight: 500;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
-}
-
-.featureItem:hover {
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 8px;
-  padding-left: 8px;
-  padding-right: 8px;
 }
 
 .featureItem:last-child {
@@ -1508,23 +1457,11 @@
   font-size: 0.75rem;
   font-weight: 700;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(var(--glow-color), 0.4);
-  transition: all 0.3s ease;
-}
-
-.featureItem:hover .featureNumber {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(var(--glow-color), 0.6);
 }
 
 .featureText {
   flex: 1;
   color: #b0b3c8;
-  transition: color 0.3s ease;
-}
-
-.featureItem:hover .featureText {
-  color: #fff;
 }
 
 .featureIcon {
@@ -1534,40 +1471,20 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.3s ease;
 }
 
 .checkIcon {
   color: #72c421;
-  filter: drop-shadow(0 1px 4px rgba(114, 196, 33, 0.4));
 }
 
 .xIcon {
   color: #e74c3c;
-  filter: drop-shadow(0 1px 4px rgba(231, 76, 60, 0.4));
-}
-
-.featureItem:hover .checkIcon,
-.featureItem:hover .xIcon {
-  transform: scale(1.2);
 }
 
 .cardFooter {
   margin-top: auto;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-}
-
-.cardFooter::before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--card-color), transparent);
 }
 
 .buyNowBtn {
@@ -1575,57 +1492,32 @@
   color: #0f1123;
   border: none;
   padding: 12px 32px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   width: 100%;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  box-shadow: 
-    0 4px 16px rgba(var(--glow-color), 0.4),
-    0 2px 8px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
-}
-
-.buyNowBtn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  transition: left 0.6s ease;
-}
-
-.buyNowBtn:hover::before {
-  left: 100%;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(var(--glow-color), 0.3);
 }
 
 .buyNowBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 
-    0 8px 24px rgba(var(--glow-color), 0.6),
-    0 4px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(var(--glow-color), 0.4);
   filter: brightness(1.1);
 }
 
-.buyNowBtn:active {
-  transform: translateY(-1px);
-}
-
-/* Responsive Design for Professional Pricing */
+/* Responsive Design for Modern Pricing */
 @media (max-width: 1200px) {
   .pricingContainer {
     gap: 20px;
   }
   
   .pricingCard {
-    padding: 20px 18px;
-    min-height: 360px;
+    padding: 20px 16px;
+    min-height: 400px;
   }
   
   .price {
@@ -1650,7 +1542,7 @@
   .pricingContainer {
     grid-template-columns: 1fr;
     gap: 24px;
-    max-width: 380px;
+    max-width: 400px;
   }
   
   .featuredCard {
@@ -1658,12 +1550,12 @@
   }
   
   .featuredCard:hover {
-    transform: translateY(-12px) scale(1.02);
+    transform: translateY(-8px);
   }
   
   .pricingCard {
-    padding: 22px 20px;
-    min-height: 340px;
+    padding: 24px 20px;
+    min-height: 380px;
   }
 }
 
@@ -1682,8 +1574,8 @@
   }
   
   .pricingCard {
-    padding: 18px 16px;
-    min-height: 320px;
+    padding: 20px 16px;
+    min-height: 360px;
   }
   
   .packageName {
@@ -1702,411 +1594,5 @@
   .buyNowBtn {
     padding: 10px 24px;
     font-size: 0.85rem;
-  }
-}
-
-/* --- Professional After Sales Service Section --- */
-.afterSalesSection {
-  margin: 80px auto;
-  max-width: 1200px;
-  padding: 0 20px;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-}
-
-.afterSalesHeader {
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.afterSalesHeader::after {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 4px;
-  background: linear-gradient(90deg, #4fc3f7, #72c421, #ffc94b, #4fc3f7);
-  border-radius: 2px;
-  animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-  0%, 100% { opacity: 0.7; }
-  50% { opacity: 1; }
-}
-
-.afterSalesTitle {
-  font-size: 2.6rem;
-  font-weight: 800;
-  color: #fff;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  line-height: 1.2;
-  background: linear-gradient(135deg, #fff 0%, #4fc3f7 50%, #fff 100%);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: titleGlow 4s ease-in-out infinite;
-}
-
-@keyframes titleGlow {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-.afterSalesSubtitle {
-  color: #ffc94b;
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-shadow: 0 1px 4px rgba(255, 201, 75, 0.3);
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  position: relative;
-}
-
-.afterSalesSubtitle::before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #ffc94b, transparent);
-  border-radius: 1px;
-}
-
-.afterSalesContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  max-width: 1100px;
-  margin: 0 auto 48px auto;
-}
-
-.afterSalesCard {
-  background: linear-gradient(145deg, #0f1123 0%, #1a1c3b 50%, #23243a 100%);
-  border-radius: 24px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  padding: 32px 24px;
-  position: relative;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  min-height: 280px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.afterSalesCard::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--icon-color), transparent, var(--icon-color));
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  border-radius: 24px 24px 0 0;
-}
-
-.afterSalesCard::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at 50% 0%, rgba(var(--icon-color), 0.1) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.afterSalesCard:hover::before {
-  opacity: 1;
-}
-
-.afterSalesCard:hover::after {
-  opacity: 1;
-}
-
-.afterSalesCard:hover {
-  transform: translateY(-16px) scale(1.03);
-  border-color: var(--icon-color);
-  box-shadow: 
-    0 0 40px rgba(var(--icon-color), 0.4),
-    0 25px 80px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.serviceIconWrapper {
-  width: 90px;
-  height: 90px;
-  background: linear-gradient(145deg, rgba(var(--icon-color), 0.15) 0%, rgba(var(--icon-color), 0.05) 100%);
-  border: 3px solid var(--icon-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 28px;
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.serviceIconWrapper::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg, transparent, rgba(var(--icon-color), 0.3), transparent);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  animation: rotate 4s linear infinite;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.afterSalesCard:hover .serviceIconWrapper {
-  transform: scale(1.15) rotate(5deg);
-  box-shadow: 
-    0 0 40px rgba(var(--icon-color), 0.6),
-    0 0 80px rgba(var(--icon-color), 0.3);
-}
-
-.afterSalesCard:hover .serviceIconWrapper::before {
-  opacity: 1;
-}
-
-.serviceIconWrapper svg {
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1;
-  position: relative;
-}
-
-.afterSalesCard:hover .serviceIconWrapper svg {
-  transform: scale(1.2) rotate(-5deg);
-  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.8));
-}
-
-.serviceTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 18px;
-  line-height: 1.3;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
-}
-
-.afterSalesCard:hover .serviceTitle {
-  color: var(--icon-color);
-  text-shadow: 0 0 20px rgba(var(--icon-color), 0.6);
-}
-
-.serviceDescription {
-  color: #b0b3c8;
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: 400;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.afterSalesCard:hover .serviceDescription {
-  color: #fff;
-}
-
-.afterSalesCTA {
-  margin-top: 40px;
-  position: relative;
-}
-
-.afterSalesCTA::before {
-  content: '';
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
-  border-radius: 1px;
-}
-
-.learnMoreBtn {
-  background: linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%);
-  color: #0f1123;
-  border: none;
-  padding: 12px 32px;
-  border-radius: 16px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  box-shadow: 
-    0 8px 24px rgba(79, 195, 247, 0.4),
-    0 4px 16px rgba(0, 0, 0, 0.2);
-  border: 2px solid #6dd4ff;
-  position: relative;
-  overflow: hidden;
-  min-width: 200px;
-}
-
-.learnMoreBtn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transition: left 0.8s ease;
-}
-
-.learnMoreBtn::after {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.learnMoreBtn:hover::before {
-  left: 100%;
-}
-
-.learnMoreBtn:hover::after {
-  opacity: 1;
-}
-
-.learnMoreBtn:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 
-    0 16px 40px rgba(79, 195, 247, 0.6),
-    0 8px 32px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(135deg, #6dd4ff 0%, #4fc3f7 100%);
-  filter: brightness(1.2);
-  border-color: #fff;
-}
-
-.learnMoreBtn:active {
-  transform: translateY(-2px) scale(1.02);
-}
-
-/* Responsive Design for After Sales Service Section */
-@media (max-width: 1200px) {
-  .afterSalesContainer {
-    gap: 24px;
-  }
-  
-  .afterSalesCard {
-    padding: 28px 20px;
-    min-height: 260px;
-  }
-  
-  .serviceIconWrapper {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media (max-width: 900px) {
-  .afterSalesSection {
-    margin: 60px auto;
-    padding: 0 16px;
-  }
-  
-  .afterSalesHeader {
-    margin-bottom: 40px;
-  }
-  
-  .afterSalesTitle {
-    font-size: 2.2rem;
-  }
-  
-  .afterSalesSubtitle {
-    font-size: 1.1rem;
-  }
-  
-  .afterSalesContainer {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 500px;
-  }
-  
-  .afterSalesCard {
-    padding: 32px 24px;
-    min-height: 240px;
-  }
-  
-  .serviceIconWrapper {
-    width: 80px;
-    height: 80px;
-  }
-}
-
-@media (max-width: 600px) {
-  .afterSalesSection {
-    margin: 40px auto;
-    padding: 0 12px;
-  }
-  
-  .afterSalesTitle {
-    font-size: 1.8rem;
-  }
-  
-  .afterSalesSubtitle {
-    font-size: 1rem;
-  }
-  
-  .afterSalesCard {
-    padding: 24px 20px;
-    min-height: 220px;
-  }
-  
-  .serviceIconWrapper {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 20px;
-  }
-  
-  .serviceTitle {
-    font-size: 1.2rem;
-  }
-  
-  .serviceDescription {
-    font-size: 0.95rem;
-  }
-  
-  .learnMoreBtn {
-    padding: 10px 28px;
-    font-size: 0.9rem;
-    min-width: 180px;
   }
 }
