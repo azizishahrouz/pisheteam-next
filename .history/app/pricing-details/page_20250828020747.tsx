@@ -125,7 +125,7 @@ const PricingDetailsPage = () => {
               <div 
                 key={index} 
                 className={styles.featureCard}
-                style={{ '--animation-delay': `${index * 0.1}s` } as React.CSSProperties}
+                style={{ '--animation-delay': `${index * 0.1}s` }}
               >
                 <div className={styles.featureHeader}>
                   <div className={styles.featureNumber}>{index + 1}</div>

@@ -76,7 +76,7 @@ const PricingDetailsPage = () => {
         <div className={styles.packageOverview}>
           <div 
             className={styles.packageCard}
-            style={{ '--package-color': packageDetails.color } as React.CSSProperties}
+            style={{ '--package-color': packageDetails.color }}
           >
             <div className={styles.cardHeader}>
               <div className={styles.packageIcon}>
