@@ -111,7 +111,15 @@
   user-select: none;
 }
 
-/* Remove individual hover styles - let the parent li:hover handle it */
+.loginLink:hover {
+  color: #4fc3f7;
+  background: rgba(79, 195, 247, 0.1);
+  transform: translateY(-2px);
+}
+
+.loginLink:active {
+  transform: translateY(0);
+}
 
 .heroContent {
   display: flex;
@@ -1315,17 +1323,7 @@
     color: #fff;
     text-align: left;
     margin: 0;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-  }
-  
-  .navLinks li:hover {
-    color: #4fc3f7;
-    background: rgba(79, 195, 247, 0.1);
-    transform: translateY(-2px);
-  }
-  
-  .navLinks li:active {
-    transform: translateY(0);
+    transition: background 0.2s, color 0.2s;
   }
   .navLinks li:last-child {
     border-bottom: none;
@@ -1380,17 +1378,6 @@
     width: 100%;
     border-bottom: 1px solid #23243a;
     text-align: left;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-  }
-  
-  .navLinks li:hover {
-    color: #4fc3f7;
-    background: rgba(79, 195, 247, 0.1);
-    transform: translateY(-2px);
-  }
-  
-  .navLinks li:active {
-    transform: translateY(0);
   }
   .navLinks li:last-child {
     border-bottom: none;

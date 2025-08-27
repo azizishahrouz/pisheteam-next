@@ -79,10 +79,7 @@ const HeroSection = () => {
           <p>
             US-based tech agency crafting custom web applications, AI solutions, and automation tools for startups and SMBs
           </p>
-          <div className={styles.heroButtons}>
-            <button className={styles.getInTouch} onClick={scrollToPricing}>Get in Touch</button>
-            <a href="/signup" className={styles.signupBtn}>ثبت‌نام کنید</a>
-          </div>
+          <button className={styles.getInTouch} onClick={scrollToPricing}>Get in Touch</button>
         </div>
         <div className={styles.heroImage}>
           <Image

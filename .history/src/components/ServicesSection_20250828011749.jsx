@@ -3,40 +3,52 @@ import styles from './ServicesSection.module.css';
 
 const services = [
   {
-    number: "01",
-    title: "طراحی وب‌سایت",
-    description: "طراحی مدرن و ریسپانسیو با آخرین تکنولوژی‌های روز دنیا",
-    icon: "💻"
+    number: 1,
+    title: "Web & Mobile Apps with AI Integration",
+    description: "Custom applications powered by artificial intelligence for seamless user experiences across all platforms",
+    icon: "🚀",
+    color: "#4fc3f7",
+    gradient: "linear-gradient(135deg, #4fc3f7 0%, #29b6f6 100%)"
   },
   {
-    number: "02",
-    title: "اپلیکیشن موبایل",
-    description: "توسعه اپلیکیشن‌های iOS و Android با تجربه کاربری عالی",
-    icon: "📱"
+    number: 2,
+    title: "Custom AI Agents",
+    description: "Intelligent virtual assistants tailored to your business needs and industry requirements",
+    icon: "🤖",
+    color: "#72c421",
+    gradient: "linear-gradient(135deg, #72c421 0%, #5a9e1a 100%)"
   },
   {
-    number: "03",
-    title: "هوش مصنوعی",
-    description: "پیاده‌سازی راه‌حل‌های هوشمند برای کسب‌وکار شما",
-    icon: "🤖"
+    number: 3,
+    title: "Advanced AI Chatbots",
+    description: "Next-generation conversational AI that understands context and responds naturally to user queries",
+    icon: "💬",
+    color: "#ffc94b",
+    gradient: "linear-gradient(135deg, #ffc94b 0%, #f39c12 100%)"
   },
   {
-    number: "04",
-    title: "راه‌حل‌های ابری",
-    description: "مهاجرت و مدیریت زیرساخت‌های ابری برای کسب‌وکار شما",
-    icon: "☁️"
+    number: 4,
+    title: "Computer Vision Solutions",
+    description: "AI-powered image and video analysis for automation, quality control, and business insights",
+    icon: "👁️",
+    color: "#e91e63",
+    gradient: "linear-gradient(135deg, #e91e63 0%, #c2185b 100%)"
   },
   {
-    number: "05",
-    title: "امنیت سایبری",
-    description: "محافظت کامل از داده‌ها و سیستم‌های شما در برابر تهدیدات",
-    icon: "🔒"
+    number: 5,
+    title: "Custom ML Models",
+    description: "Tailored machine learning solutions designed specifically for your unique use cases and data",
+    icon: "🧠",
+    color: "#9c27b0",
+    gradient: "linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%)"
   },
   {
-    number: "06",
-    title: "تحلیل داده",
-    description: "تبدیل داده‌های خام به بینش‌های ارزشمند برای تصمیم‌گیری",
-    icon: "📊"
+    number: 6,
+    title: "Finetuning LLMs",
+    description: "Optimized large language models customized for your industry, terminology, and specific requirements",
+    icon: "⚡",
+    color: "#ff5722",
+    gradient: "linear-gradient(135deg, #ff5722 0%, #e64a19 100%)"
   }
 ];
 

@@ -10,18 +10,19 @@ const packages = [
     period: "ماه",
     color: "#cd7f32",
     glowColor: "205, 127, 50",
-    icon: "bronze",
     features: [
       "پاسخ‌گویی هوشمند ۲۴ ساعته",
-      "جواب خودکار به سوالات متداول مشتری (حداکثر ۱۰۰ سوال در روز)",
+      "پاسخ خودکار به سوالات متداول مشتری",
+      "حداکثر ۱۰۰ سؤال در روز",
       "ثبت سفارش و پیگیری وضعیت ارسال",
       "قابلیت اتصال به دیتابیس",
       "مدیریت اطلاعات مشتری",
       "گزارش هفتگی بر اساس عملکرد",
-      "ارسال گزارش برای ایمیل",
+      "ارسال گزارش به ایمیل",
       "پشتیبانی پایه"
     ],
-    featured: false
+    featured: false,
+    icon: "🟤"
   },
   {
     name: "نقره‌ای",
@@ -29,21 +30,22 @@ const packages = [
     period: "ماه",
     color: "#c0c0c0",
     glowColor: "192, 192, 192",
-    icon: "silver",
     features: [
       "پاسخ‌گویی هوشمند پیشرفته ۲۴ ساعته",
-      "جواب خودکار به سوالات رایج و پیچیده (حداکثر ۳۰۰ سوال در روز)",
-      "پاسخ با لحن قابل تنظیم (مثل صمیمی یا رسمی)",
+      "پاسخ خودکار به سوالات رایج و نسبتاً پیچیده",
+      "حداکثر ۳۰۰ سؤال در روز",
+      "پاسخ با لحن قابل تنظیم (صمیمی یا رسمی)",
       "ثبت سفارش و پیگیری وضعیت ارسال پیشرفته",
       "ارجاع مستقیم کاربر به لینک خرید محصول",
       "مدیریت پیشرفته اطلاعات مشتری",
-      "برچسب‌گذاری و دسته‌بندی مشتری",
+      "برچسب‌گذاری و دسته‌بندی مشتریان",
       "گزارش هفتگی پیشرفته بر اساس عملکرد",
-      "ارسال گزارش چند منظوره برای ایمیل",
-      "پیام یادآوری و تخفیف خودکار",
+      "ارسال گزارش چندمنظوره به ایمیل",
+      "پیام یادآوری و تخفیف خودکار برای مشتریان",
       "پشتیبانی استاندارد"
     ],
-    featured: false
+    featured: false,
+    icon: "⚪"
   },
   {
     name: "طلایی",
@@ -51,28 +53,35 @@ const packages = [
     period: "ماه",
     color: "#ffd700",
     glowColor: "255, 215, 0",
-    icon: "gold",
     features: [
-      "پاسخ‌گویی هوشمند پیشرفته چند کاناله (سایت، تلگرام...) ۲۴ ساعته",
-      "جواب خودکار به سوالات پیچیده‌تر (حداکثر ۵۰۰ سوال در روز)",
-      "پاسخ دقیق‌تر و حرفه‌ای‌تر با لحن قابل تنظیم برند شما (مثل صمیمی یا رسمی یا لوکس)",
-      "پردازش ویس مشتری (مثل سفارش با ویس) و تبدیل به متن در تلگرام",
-      "پردازش عکس (مثل پیشنهاد محصول مشابه برای عکس ارسال شده)",
+      "پاسخ‌گویی هوشمند پیشرفته چند کاناله",
+      "سایت، تلگرام، واتساپ و ... – ۲۴ ساعته",
+      "پاسخ خودکار به سوالات پیچیده‌تر",
+      "حداکثر ۵۰۰ سؤال در روز",
+      "پاسخ دقیق و حرفه‌ای با لحن قابل تنظیم",
+      "مطابق با برند شما (صمیمی، رسمی، لوکس)",
+      "پردازش ویس مشتری",
+      "ثبت سفارش صوتی در تلگرام و تبدیل به متن",
+      "پردازش عکس ارسالی",
+      "پیشنهاد محصول مشابه بر اساس تصویر",
       "ثبت سفارش و پیگیری حرفه‌ای با جزئیات کامل",
-      "امکان اتصال به پیامک و ایمیل برای تبلیغات هدفمند",
+      "اتصال به سامانه پیامک و ایمیل برای تبلیغات",
       "ارجاع مستقیم کاربر به لینک خرید محصول",
       "مدیریت حرفه‌ای اطلاعات مشتری",
-      "گزارش دقیق هفتگی و ماهانه پیشرفته بر اساس عملکرد",
+      "گزارش دقیق هفتگی و ماهانه بر اساس عملکرد",
       "ارسال گزارش حرفه‌ای به ایمیل",
       "تحلیل محصولات یا خدمات پرطرفدار",
-      "پنل مدیریت حرفه‌ای مختص به کسب و کار شما",
-      "داشبورد مدیریت برای دیدن عملکرد سیستم",
-      "مشاوره تخصصی برای توسعه کسب و کار و رشد برند و مجموعه شما",
-      "پیام یادآور برای مشتریان غیر فعال همراه با دریافت کد تخفیف شخصی + بازی",
-      "پشتیبانی حرفه‌ای و مشاوره برای استفاده بهتر از سیستم",
-      "امکان اضافه کردن قابلیت‌های اختصاصی با مبالغ توافقی"
+      "پنل مدیریت حرفه‌ای متناسب با کسب‌وکار",
+      "داشبورد مدیریتی برای مشاهده عملکرد سیستم",
+      "مشاوره تخصصی جهت توسعه کسب‌وکار و رشد برند",
+      "پیام یادآور برای مشتریان غیرفعال",
+      "همراه با کد تخفیف شخصی و بازی انگیزشی",
+      "پشتیبانی حرفه‌ای و مشاوره برای بهره‌برداری بهتر",
+      "امکان اضافه کردن قابلیت‌های اختصاصی",
+      "با هزینه توافقی"
     ],
-    featured: true
+    featured: true,
+    icon: "🟡"
   }
 ];
 
@@ -80,6 +89,7 @@ const PricingSection = () => {
   const router = useRouter();
 
   const navigateToDetails = (pkg) => {
+    // ایجاد URL با پارامترهای پلن
     const params = new URLSearchParams({
       name: pkg.name,
       price: pkg.price,
@@ -90,37 +100,6 @@ const PricingSection = () => {
     });
     
     router.push(`/pricing-details?${params.toString()}`);
-  };
-
-  const getIcon = (iconType) => {
-    switch(iconType) {
-      case 'bronze':
-        return (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" fill="#cd7f32" stroke="#8B4513" strokeWidth="1"/>
-            <path d="M12 6v12M8 12h8" stroke="#8B4513" strokeWidth="1.5" strokeLinecap="round"/>
-          </svg>
-        );
-      case 'silver':
-        return (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" fill="#c0c0c0" stroke="#808080" strokeWidth="1"/>
-            <path d="M12 6v12M8 12h8" stroke="#808080" strokeWidth="1.5" strokeLinecap="round"/>
-            <circle cx="12" cy="12" r="4" fill="#e0e0e0"/>
-          </svg>
-        );
-      case 'gold':
-        return (
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" fill="#ffd700" stroke="#FFA500" strokeWidth="1"/>
-            <path d="M12 6v12M8 12h8" stroke="#FFA500" strokeWidth="1.5" strokeLinecap="round"/>
-            <circle cx="12" cy="12" r="4" fill="#FFD700"/>
-            <path d="M12 8l1 3h3l-2 2 1 3-3-2-3 2 1-3-2-2h3z" fill="#FFA500"/>
-          </svg>
-        );
-      default:
-        return null;
-    }
   };
 
   return (
@@ -144,8 +123,7 @@ const PricingSection = () => {
             className={`${styles.pricingCard} ${pkg.featured ? styles.featuredCard : ''}`}
             style={{
               '--card-color': pkg.color,
-              '--glow-color': pkg.glowColor,
-              '--animation-delay': `${index * 0.1}s`
+              '--glow-color': pkg.glowColor
             }}
           >
             {/* Card Background Effects */}
@@ -154,7 +132,7 @@ const PricingSection = () => {
               <div className={styles.bgPattern}></div>
             </div>
             
-            {/* Featured Badge - Positioned to avoid text overlap */}
+            {/* Featured Badge */}
             {pkg.featured && (
               <div className={styles.featuredBadge}>
                 <span>پیشنهاد ویژه</span>
@@ -164,18 +142,14 @@ const PricingSection = () => {
             
             <div className={styles.cardHeader}>
               <div className={styles.packageIcon}>
-                <div className={styles.iconWrapper}>
-                  {getIcon(pkg.icon)}
-                </div>
+                <span className={styles.iconEmoji}>{pkg.icon}</span>
                 <div className={styles.iconRing}></div>
                 <div className={styles.iconGlow}></div>
               </div>
-              
               <div className={styles.packageInfo}>
                 <div className={styles.packageName}>{pkg.name}</div>
                 <div className={styles.packageTagline}>پلن {pkg.name.toLowerCase()}</div>
               </div>
-              
               <div className={styles.priceSection}>
                 <div className={styles.priceContainer}>
                   <span className={styles.price}>{pkg.price}</span>
@@ -188,19 +162,16 @@ const PricingSection = () => {
             <div className={styles.cardBody}>
               <div className={styles.featuresHeader}>
                 <h3 className={styles.featuresTitle}>امکانات کلیدی</h3>
-                <div className={styles.featuresCount}>
-                  <span className={styles.countNumber}>{pkg.features.length}</span>
-                  <span className={styles.countText}>ویژگی</span>
-                </div>
+                <div className={styles.featuresCount}>{pkg.features.length} ویژگی</div>
               </div>
               
               <ul className={styles.featuresList}>
-                {pkg.features.slice(0, 2).map((feature, featureIndex) => (
+                {pkg.features.slice(0, 6).map((feature, featureIndex) => (
                   <li key={featureIndex} className={styles.featureItem}>
                     <div className={styles.featureNumber}>{featureIndex + 1}</div>
                     <span className={styles.featureText}>{feature}</span>
                     <div className={styles.featureIcon}>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                         <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.checkIcon}/>
                       </svg>
                     </div>
@@ -208,14 +179,9 @@ const PricingSection = () => {
                 ))}
               </ul>
               
-              {pkg.features.length > 2 && (
+              {pkg.features.length > 6 && (
                 <div className={styles.moreFeatures}>
-                  <span className={styles.moreText}>+{pkg.features.length - 2} ویژگی دیگر</span>
-                  <div className={styles.moreIcon}>
-                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none">
-                      <path d="M6 9L12 15L18 9" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
+                  <span className={styles.moreText}>+{pkg.features.length - 6} ویژگی دیگر</span>
                 </div>
               )}
             </div>
@@ -225,14 +191,15 @@ const PricingSection = () => {
                 className={styles.detailsBtn}
                 onClick={() => navigateToDetails(pkg)}
               >
-                <span>جزئیات</span>
+                <span>مشاهده جزئیات کامل</span>
                 <svg className={styles.arrowIcon} viewBox="0 0 24 24" fill="none">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
               
               <button className={styles.buyNowBtn}>
-                <span>انتخاب</span>
+                <span>انتخاب این پلن</span>
+                <div className={styles.btnGlow}></div>
               </button>
             </div>
             

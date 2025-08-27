@@ -1,0 +1,593 @@
+/* --- Standard Professional Pricing Section --- */
+.pricingSection {
+  margin: 35px auto;
+  max-width: 1100px;
+  padding: 0 16px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.pricingHeader {
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.headerContent {
+  position: relative;
+  z-index: 2;
+}
+
+.pricingTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+.pricingSubtitle {
+  font-size: 0.9rem;
+  color: #b0bec5;
+  margin-bottom: 18px;
+  font-weight: 400;
+}
+
+.headerDecoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.decorationLine {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #4fc3f7, transparent);
+  border-radius: 1px;
+}
+
+.decorationDot {
+  width: 8px;
+  height: 8px;
+  background: #4fc3f7;
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.pricingContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricingCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 20px 16px;
+  min-height: 280px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cardSlideIn 0.6s ease-out forwards;
+  animation-delay: var(--animation-delay);
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.pricingCard:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(79, 195, 247, 0.3);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(79, 195, 247, 0.1),
+    0 0 20px rgba(var(--glow-color), 0.2);
+}
+
+.featuredCard {
+  border-color: rgba(255, 215, 0, 0.3);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 215, 0, 0.2),
+    0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.featuredCard:hover {
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 215, 0, 0.4),
+    0 0 40px rgba(255, 215, 0, 0.4);
+}
+
+.cardBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bgGradient {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(var(--glow-color), 0.1) 0%,
+    rgba(var(--glow-color), 0.05) 30%,
+    transparent 70%
+  );
+  animation: rotate 20s linear infinite;
+}
+
+.bgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.03) 0%, transparent 50%);
+  opacity: 0.6;
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: linear-gradient(135deg, #ffd700, #ffb300);
+  color: #000;
+  padding: 6px 10px;
+  border-radius: 14px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  animation: badgeFloat 3s ease-in-out infinite;
+}
+
+.badgeGlow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  border-radius: inherit;
+  filter: blur(8px);
+  opacity: 0.6;
+  z-index: -1;
+  animation: badgeGlow 2s ease-in-out infinite alternate;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.packageIcon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.iconRing {
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border: 2px solid rgba(var(--glow-color), 0.3);
+  border-radius: 50%;
+  animation: iconRotate 8s linear infinite;
+}
+
+.iconGlow {
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: radial-gradient(circle, rgba(var(--glow-color), 0.2), transparent);
+  border-radius: 50%;
+  filter: blur(6px);
+  animation: iconPulse 3s ease-in-out infinite;
+}
+
+.packageInfo {
+  flex: 1;
+  text-align: center;
+  margin: 0 12px;
+}
+
+.packageName {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 4px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.packageTagline {
+  font-size: 0.8rem;
+  color: #b0bec5;
+  font-weight: 400;
+}
+
+.priceSection {
+  text-align: right;
+  min-width: 70px;
+}
+
+.priceContainer {
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  margin-bottom: 4px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.period {
+  font-size: 0.8rem;
+  color: #b0bec5;
+  margin-right: 3px;
+}
+
+.priceSubtitle {
+  font-size: 0.7rem;
+  color: #90a4ae;
+  font-weight: 400;
+}
+
+.cardBody {
+  margin-bottom: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.featuresHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 0 6px;
+}
+
+.featuresTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e3f2fd;
+  margin: 0;
+}
+
+.featuresCount {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.countNumber {
+  background: linear-gradient(135deg, #4fc3f7, #29b6f6);
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  min-width: 24px;
+  text-align: center;
+}
+
+.countText {
+  font-size: 0.65rem;
+  color: #b0bec5;
+  font-weight: 400;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.featureItem:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(2px);
+}
+
+.featureNumber {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, var(--card-color), rgba(var(--glow-color), 0.8));
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.featureText {
+  flex: 1;
+  font-size: 0.75rem;
+  color: #e3f2fd;
+  line-height: 1.4;
+  text-align: right;
+}
+
+.featureIcon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4caf50;
+  flex-shrink: 0;
+}
+
+.checkIcon {
+  animation: iconPulse 2s ease-in-out infinite;
+}
+
+.moreFeatures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 6px 10px;
+  background: rgba(79, 195, 247, 0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.moreFeatures:hover {
+  background: rgba(79, 195, 247, 0.2);
+  transform: translateY(-1px);
+}
+
+.moreText {
+  font-size: 0.7rem;
+  color: #4fc3f7;
+  font-weight: 500;
+}
+
+.moreIcon {
+  color: #4fc3f7;
+  animation: floatMove 2s ease-in-out infinite;
+}
+
+.cardFooter {
+  display: flex;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.detailsBtn, .buyNowBtn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.detailsBtn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #b0bec5;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detailsBtn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.buyNowBtn {
+  background: linear-gradient(135deg, var(--card-color), rgba(var(--glow-color), 0.8));
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(var(--glow-color), 0.3);
+}
+
+.buyNowBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(var(--glow-color), 0.4);
+}
+
+.arrowIcon {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  transition: transform 0.2s ease;
+}
+
+.detailsBtn:hover .arrowIcon {
+  transform: translateX(2px);
+}
+
+.cardShine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.pricingCard:hover .cardShine {
+  left: 100%;
+}
+
+/* Animations */
+@keyframes titleGlow {
+  0% { filter: drop-shadow(0 0 5px rgba(79, 195, 247, 0.5)); }
+  100% { filter: drop-shadow(0 0 15px rgba(79, 195, 247, 0.8)); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+@keyframes cardSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes badgeFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+@keyframes badgeGlow {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+@keyframes iconRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes iconPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+@keyframes floatMove {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .pricingContainer {
+    gap: 14px;
+  }
+  .pricingCard {
+    padding: 18px 14px;
+    min-height: 260px;
+  }
+  .price {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .pricingSection {
+    margin: 30px auto;
+    padding: 0 12px;
+  }
+  .pricingTitle {
+    font-size: 1.6rem;
+  }
+  .pricingContainer {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 380px;
+  }
+  .pricingCard {
+    padding: 20px 16px;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .pricingSection {
+    margin: 25px auto;
+    padding: 0 10px;
+  }
+  .pricingTitle {
+    font-size: 1.4rem;
+  }
+  .pricingSubtitle {
+    font-size: 0.85rem;
+  }
+  .pricingCard {
+    padding: 16px 14px;
+    min-height: 240px;
+  }
+  .packageName {
+    font-size: 1.2rem;
+  }
+  .price {
+    font-size: 1.2rem;
+  }
+  .featureItem {
+    font-size: 0.7rem;
+    padding: 5px 6px;
+  }
+  .buyNowBtn, .detailsBtn {
+    padding: 7px 10px;
+    font-size: 0.7rem;
+  }
+}
